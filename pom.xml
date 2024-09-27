@@ -70,7 +70,7 @@
         <version>${maven.surefire.plugin.version}</version>
         <configuration>
           <includes>
-            <include>**/*CollectionsRunner.java</include>
+            <include>**/*TestRunner.java</include>
           </includes>
         </configuration>
       </plugin>
