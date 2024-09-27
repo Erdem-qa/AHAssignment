@@ -79,7 +79,7 @@ public class CollectionsStepDefinitions extends BaseUrl {
     @And("the error message should be {string}")
     public void theErrorMessageShouldBe(String errorMessage) {
         try {
-            assertEquals(response.asString(), errorMessage);
+            assertEquals(errorMessage, response.asString());
         } catch (Exception e) {
             throw new RuntimeException("An error message should be displayed " + e.getMessage());
         }

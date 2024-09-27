@@ -21,9 +21,13 @@ jobs:
           distribution: 'corretto'
           java-version: 17
 
+      - name: Unit Tests
+        run: mvn clean test
+
+      - name: Build the application
+        run: |
+          mvn clean
+          mvn -B package --file pom.xml
+
       - name: Run Cucumber Tests
         run: mvn clean verify
-
-
-
-      
