@@ -18,7 +18,7 @@ jobs:
       - name: Setup JDK 17
         uses: actions/setup-java@v3
         with:
-          distribution: 'jdk-17.0.3.1.jdk'
+          distribution: 'corretto'
           java-version: 17
 
       - name: Build the application
