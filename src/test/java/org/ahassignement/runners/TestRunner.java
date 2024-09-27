@@ -18,6 +18,6 @@ import org.junit.runner.RunWith;
         glue = {"org.ahassignement.stepDefinitions"},
         tags = "@test"
 )
-public class CollectionsRunner {
+public class TestRunner {
 
 }
