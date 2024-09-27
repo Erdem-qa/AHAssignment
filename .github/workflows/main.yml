@@ -18,7 +18,7 @@ jobs:
       - name: Setup JDK 17
         uses: actions/setup-java@v3
         with:
-          distribution: 'coretto'
+          distribution: 'jdk-17.0.3.1.jdk'
           java-version: 17
 
       - name: Build the application
