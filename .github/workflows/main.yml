@@ -1,14 +1,16 @@
-name: Java CI with Maven
+name: Cucumber API tests
 
 on:
   push:
     branches: [ "main" ]
+
   pull_request:
     branches: [ "main" ]
 
+
 jobs:
   build:
-
+    name: run-unit-test
     runs-on: ubuntu-latest
 
     steps:
@@ -19,5 +21,6 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
           cache: maven
+
       - name: Build with Maven
-        run: mvn clean verify
+        run: mvn -B package --file pom.xml
