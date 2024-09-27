@@ -28,3 +28,7 @@ jobs:
         run: |
           mvn clean
           mvn -B package --file pom.xml
+
+      - name: API Tests
+        run: |
+          mvn clean verify
