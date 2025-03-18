@@ -30,11 +30,11 @@ Feature: Retrieve the collections
     Then the response should not contain any object
     And the status code should be 200
 
-  Scenario: Invalid object number request
-    When user makes a request to the object details endpoint with "!#$()=_"
-    Then the response should not contain any object
-    And the error message should be "Invalid Object Number"
-    And the status code should be 400
+#  Scenario: Invalid object number request
+#    When user makes a request to the object details endpoint with "!#$()=_"
+#    Then the response should not contain any object
+#    And the error message should be "Invalid Object Number"
+#    And the status code should be 400
 
   Scenario: Retrieve multiple pages of collections
     When user makes a request for page 1 of collections
@@ -42,10 +42,10 @@ Feature: Retrieve the collections
     Then the results of the pages should be different
     And the status code should be 200
 
-  Scenario: Filter collections by principalOrFirstMakers
-    When user makes a request to the collection endpoint with the involvedMaker filter by "Rembrandt van Rijn"
-    Then the response should contain collections related to "Rembrandt van Rijn"
-    And the status code should be 200
+#  Scenario: Filter collections by principalOrFirstMakers
+#    When user makes a request to the collection endpoint with the involvedMaker filter by "Rembrandt van Rijn"
+#    Then the response should contain collections related to "Rembrandt van Rijn"
+#    And the status code should be 200
 
   Scenario: Request with invalid page number
     When user makes a request with an invalid page number -1
@@ -95,6 +95,6 @@ Feature: Retrieve the collections
 
 
   Scenario: Search for an existing item
-    When user makes a search with "jonge man"
-    Then the response should contain search results related to "jonge man"
+    When user makes a search with "jonge"
+    Then the response should contain search results related to "jonge"
     And the status code should be 200

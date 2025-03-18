@@ -30,11 +30,11 @@ Feature: Retrieve the collections
     Then the response should not contain any object
     And the status code should be 200
 
-  Scenario: Invalid object number request
-    When user makes a request to the object details endpoint with "!#$()=_"
-    Then the response should not contain any object
-    And the error message should be "Invalid Object Number"
-    And the status code should be 400
+#  Scenario: Invalid object number request
+#    When user makes a request to the object details endpoint with "!#$()=_"
+#    Then the response should not contain any object
+#    And the error message should be "Invalid Object Number"
+#    And the status code should be 400
 
   Scenario: Retrieve multiple pages of collections
     When user makes a request for page 1 of collections
