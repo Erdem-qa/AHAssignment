@@ -41,7 +41,7 @@ jobs:
             ${{ runner.os }}-maven
 
       - name: Run Cucumber Tests and Generate Reports
-        run: mvn test
+        run: mvn verify
 
       - name: Debug Report Files
         run: ls -R target
