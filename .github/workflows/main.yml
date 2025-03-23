@@ -39,7 +39,7 @@ jobs:
             ${{ runner.os }}-maven
 
       - name: Run Cucumber Tests and Generate Reports
-        run: mvn test -Dcucumber.options="--plugin json:target/json-reports/cucumber.json"
+        run: mvn test
 
       - name: Debug - Check JSON Report
         run: ls -l target/json-reports/
@@ -47,11 +47,11 @@ jobs:
       - name: Run Maven Verify Step (Generate HTML Reports)
         run: mvn verify
 
-      - name: Upload Cucumber Reports
-        uses: actions/upload-artifact@v3
-        with:
-            name: cucumber-reports
-            path: target/json-reports/
+#      - name: Upload Cucumber Reports
+#        uses: actions/upload-artifact@v3
+#        with:
+#            name: cucumber-reports
+#            path: target/json-reports/
       - name: Upload Cucumber HTML & PDF Reports
         uses: actions/upload-artifact@v3
         with:
