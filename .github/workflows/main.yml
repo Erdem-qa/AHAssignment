@@ -17,6 +17,8 @@ jobs:
     steps:
       - name: Checkout the code
         uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
 
       - name: Set up JDK 17
         uses: actions/setup-java@v3
@@ -44,19 +46,19 @@ jobs:
         run: mvn test
 
       - name: Upload Cucumber HTML Report
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v3.1.2
         with:
           name: cucumber-html-report
           path: target/cucumber-html-reports/cucumber-reports.html
 
       - name: Upload Spark Report
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v3.1.2
         with:
           name: spark-report
           path: target/spark_report/spark.html
 
       - name: Upload Extent PDF Report
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v3.1.2
         with:
           name: extent-pdf-report
           path: target/pdf_report/extentPdf.pdf
