@@ -13,7 +13,6 @@ public class RequestHelper extends TestContext {
                 .queryParam("key", apiKey)
                 .queryParam("p", page)
                 .queryParam("ps", pageSize)
-                .log().uri()
                 .when()
                 .get(COLLECTION_ENDPOINT);
     }
@@ -21,7 +20,6 @@ public class RequestHelper extends TestContext {
     public static void getObjectDetails(String apiKey, String objectNumber) {
         response = given()
                 .queryParam("key", apiKey)
-                .log().uri()
                 .when()
                 .get(COLLECTION_ENDPOINT + "/{objectNumber}", objectNumber);
     }
@@ -47,7 +45,6 @@ public class RequestHelper extends TestContext {
                 .queryParam("involvedMaker", TestUtils.extractFullName(involvedMaker))
                 .queryParam("p", page)
                 .queryParam("ps", pageSize)
-                .log().uri()
                 .when()
                 .get(COLLECTION_ENDPOINT);
 
@@ -59,7 +56,6 @@ public class RequestHelper extends TestContext {
                 .queryParam("p", page)
                 .queryParam("ps", pageSize)
                 .queryParam("s", parameters)
-                .log().uri()
                 .when()
                 .get(COLLECTION_ENDPOINT);
 
@@ -71,7 +67,6 @@ public class RequestHelper extends TestContext {
                 .queryParam("q", keyword.replaceAll("[\\p{Punct}]", " "))
                 .queryParam("p", page)
                 .queryParam("ps", pageSize)
-                .log().uri()
                 .when()
                 .get(COLLECTION_ENDPOINT);
 

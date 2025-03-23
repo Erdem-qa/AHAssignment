@@ -11,26 +11,26 @@ Feature: Retrieve the collections
     And the error message should be "Invalid key"
 
     #Collections  API
-  Scenario: Retrieve the existing collections with page size
+  Scenario: Retrieving the existing collections with page size
     When user sends a get request with a page size
     Then the response should contain a list of collections with the page size
     And the status code should be 200
 
     #Collection API
-  Scenario: Retrieve multiple pages of collections
+  Scenario: Retrieving multiple pages of collections
     When user makes a request for page 1 of collections
     And user makes a request for page 2 of collections
     Then the results of the pages should be different
     And the status code should be 200
 
     #Collection Details API
-  Scenario: Retrieve details of a specific object
+  Scenario: Retrieving details of a specific object
     When user makes a request with an object number for the object details
     Then the response should contain the object's details and should match the Json schema
     And the status code should be 200
 
      #Collection Details API
-  Scenario: Retrieve details of a specific object by filtering
+  Scenario: Retrieving details of a specific object by filtering
     When user sends a get request with filtering parameters in English
     Then user makes a request with an object number for the object details
     Then the response should contain the filtering parameters in the object details
@@ -45,6 +45,7 @@ Feature: Retrieve the collections
     And the error message is not "Invalid Object Number"
 
     #Collection API
+    #Please see the bug report
   Scenario: Filter collections by principalOrFirstMakers
     When user makes a request to the collection endpoint with filter by the involvedMaker
     Then the response should contain collections regarding the involvedMaker
