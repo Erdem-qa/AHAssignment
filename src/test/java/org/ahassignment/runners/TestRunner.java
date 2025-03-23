@@ -9,16 +9,18 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         plugin = {
                 "pretty",
-                "html:target/test-reports/cucumber-reports/cucumber-reports.html",
+                "html:target/cucumber-html-reports/cucumber-reports.html",
                 "json:target/json-reports/cucumber.json",
-                "junit:target/test-reports/xml-report/cucumber.xml",
+                "junit:target/junit-reports/cucumber.xml",
                 "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
-                "rerun:target/failed-tests.txt",
+                "rerun:target/rerun/failed-tests.txt"
 
         },
         features = "src/test/resources/features",
         glue = {"org.ahassignment.stepDefinitions"},
-        tags = "@test1"
+        tags = "@test1",
+        monochrome = true,
+        publish = true
 )
 public class TestRunner {
 

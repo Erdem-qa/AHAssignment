@@ -8,14 +8,16 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         plugin = {
                 "pretty",
-                "html:target/test-reports/cucumber-reports/cucumber-reports.html",
-                "json:target/test-reports/json-reports/cucumber.json",
-                "junit:target/test-reports/xml-report/cucumber.xml",
+                "html:target/cucumber-html-reports/cucumber-reports.html",
+                "json:target/json-reports/cucumber.json",
+                "junit:target/junit-reports/cucumber.xml",
                 "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
 
         },
-        features = "@target/failed-tests.txt",
-        glue = {"org.ahassignment.stepDefinitions"}
+        features = "@target/rerun/failed-tests.txt",
+        glue = {"org.ahassignment.stepDefinitions"},
+        monochrome = true,
+        publish = true
 )
 public class FailedTestCaseRunner {
 }

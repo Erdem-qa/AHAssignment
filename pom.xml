@@ -78,11 +78,6 @@
       <scope>provided</scope>
     </dependency>
     <dependency>
-      <groupId>net.masterthought</groupId>
-      <artifactId>cucumber-reporting</artifactId>
-      <version>${cucumber-reporting.version}</version>
-    </dependency>
-    <dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-simple</artifactId>
       <version>${slf4j.version}</version>
@@ -123,7 +118,7 @@
             <include>**/*TestRunner.java</include>
           </includes>
           <useSystemClassLoader>true</useSystemClassLoader>
-          <reportsDirectory>${project.build.directory}/test-reports/surefire-reports</reportsDirectory>
+          <reportsDirectory>${project.build.directory}/surefire-reports</reportsDirectory>
         </configuration>
       </plugin>
       <plugin>
@@ -139,15 +134,8 @@
             </goals>
             <configuration>
               <projectName>AHAssignment</projectName>
-              <outputDirectory>${project.build.directory}</outputDirectory>
-              <inputDirectory>${project.build.directory}</inputDirectory>
-              <jsonFiles>
-                <pram>**/json-reports/*.json</pram>
-              </jsonFiles>
-              <classificationFiles>
-                <param>sample.properties</param>
-                <param>other.properties</param>
-              </classificationFiles>
+              <outputDirectory>${project.build.directory}/cucumber-html-reports</outputDirectory>
+              <jsonFiles>${project.build.directory}/json-reports/cucumber.json</jsonFiles>
             </configuration>
           </execution>
         </executions>
