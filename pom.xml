@@ -138,13 +138,13 @@
               <goal>generate</goal>
             </goals>
             <configuration>
-              <projectName>ah-qa-assignment</projectName>
-              <outputDirectory>${project.build.directory}</outputDirectory>
-              <inputDirectory>${project.build.directory}</inputDirectory>
+              <projectName>AHAssignment</projectName>
+              <outputDirectory>${project.build.directory}/cucumber-reports</outputDirectory>
+              <inputDirectory>${project.build.directory}/test_reports/json_reports</inputDirectory>
               <jsonFiles>
-                <pram>**/json-reports/*.json</pram>
+                <param>${project.build.directory}/test_reports/json_reports/cucumber.json</param>
               </jsonFiles>
-              <classificationFiles>->
+              <classificationFiles>
                 <param>sample.properties</param>
                 <param>other.properties</param>
               </classificationFiles>
