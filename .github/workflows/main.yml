@@ -36,8 +36,8 @@ jobs:
       - name: Run Tests
         run: mvn test
 
-      - name: Generate Cucumber Reports
-        run: mvn -B test-compile io.cucumber:cucumber-reporting:generate
+#      - name: Generate Cucumber Reports
+#        run: mvn -B test-compile io.cucumber:cucumber-reporting:generate
 
 
 #      - name: Run Cucumber Tests and Generate Reports
