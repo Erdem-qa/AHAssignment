@@ -40,32 +40,23 @@ jobs:
 
       - name: Run Cucumber Tests and Generate Reports
         run: mvn test
+      - name: Run Cucumber Tests and Generate Reports
+        run: mvn test
 
-#      - name: Debug - Check JSON Report
-#        run: ls -l target/json-reports/
-#
-#      - name: Run Maven Verify Step (Generate HTML Reports)
-#        run: mvn verify
+      - name: Upload Cucumber HTML Report
+        uses: actions/upload-artifact@v3
+        with:
+          name: cucumber-html-report
+          path: target/cucumber-html-reports/cucumber-reports.html
 
-#      - name: Upload Cucumber Reports
-#        uses: actions/upload-artifact@v3
-#        with:
-#            name: cucumber-reports
-#            path: target/json-reports/
-#      - name: Upload Cucumber HTML & PDF Reports
-#        uses: actions/upload-artifact@v3
-#        with:
-#          name: cucumber-html-pdf-reports
-#          path: target/cucumber-html-reports/
-#
-#      - name: Upload Extent Spark Reports
-#        uses: actions/upload-artifact@v3
-#        with:
-#          name: extent-spark-reports
-#          path: target/spark-reports/
-#
-#      - name: Upload Extent Reports
-#        uses: actions/upload-artifact@v3
-#        with:
-#          name: extent-reports
-#          path: target/extent-report/
+      - name: Upload Spark Report
+        uses: actions/upload-artifact@v3
+        with:
+          name: spark-report
+          path: target/spark_report/spark.html
+
+      - name: Upload Extent PDF Report
+        uses: actions/upload-artifact@v3
+        with:
+          name: extent-pdf-report
+          path: target/pdf_report/extentPdf.pdf
