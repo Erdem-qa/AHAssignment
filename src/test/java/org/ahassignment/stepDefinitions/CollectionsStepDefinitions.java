@@ -1,12 +1,12 @@
-package org.ahassignement.stepDefinitions;
+package org.ahassignment.stepDefinitions;
 
 
 import groovy.util.logging.Slf4j;
 import io.cucumber.java.en.*;
-import org.ahassignement.testBase.TestContext;
+import org.ahassignment.testBase.TestContext;
 
-import org.ahassignement.utils.RequestHelper;
-import org.ahassignement.utils.TestUtils;
+import org.ahassignment.utils.RequestHelper;
+import org.ahassignment.utils.TestUtils;
 
 import java.util.HashSet;
 import java.util.List;

@@ -1,6 +1,6 @@
-package org.ahassignement.utils;
+package org.ahassignment.utils;
 
-import org.ahassignement.testBase.TestContext;
+import org.ahassignment.testBase.TestContext;
 
 import static io.restassured.RestAssured.given;
 

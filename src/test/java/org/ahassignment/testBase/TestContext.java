@@ -1,9 +1,9 @@
-package org.ahassignement.testBase;
+package org.ahassignment.testBase;
 
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
-import org.ahassignement.utils.ConfigurationReader;
-import org.ahassignement.utils.DotEnvToSystemEnv;
+import org.ahassignment.utils.ConfigurationReader;
+import org.ahassignment.utils.DotEnvToSystemEnv;
 
 
 public class TestContext {

@@ -56,9 +56,9 @@ git clone https://github.com/
 * Run all tests:
     * `mvn test`
 * Run all tests via runner:
-    * `mvn test -Dtest=org.ahassignement.runners.TestRunner`
+    * `mvn test -Dtest=org.ahassignment.runners.TestRunner`
 * Run Failed tests :
-    * `mvn test -Dtest=org.ahassignement.runners.FailedTestCaseRunner`
+    * `mvn test -Dtest=org.ahassignment.runners.FailedTestCaseRunner`
       _Failed tests are logged in target/failed-tests.txt and can be re-run using this command._
 
 ### To Run the tests via IDE _(recommended IDE: intellij)_

@@ -1,4 +1,4 @@
-package org.ahassignement.utils;
+package org.ahassignment.utils;
 
 import java.io.FileInputStream;
 import java.util.Properties;

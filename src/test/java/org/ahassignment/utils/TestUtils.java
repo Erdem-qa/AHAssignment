@@ -1,4 +1,4 @@
-package org.ahassignement.utils;
+package org.ahassignment.utils;
 
 import groovy.util.logging.Slf4j;
 import io.restassured.response.Response;
