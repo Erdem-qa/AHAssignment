@@ -1,4 +1,4 @@
-
+@test
 Feature: Retrieve the collections
 
   Background:
@@ -11,7 +11,6 @@ Feature: Retrieve the collections
     And the error message should be "Invalid key"
 
     #Collections  API
-     @test1
   Scenario: Retrieving the existing collections with page size
     When user sends a get request with a page size
     Then the response should contain a list of collections with the page size

@@ -41,9 +41,6 @@ jobs:
       - name: Run Cucumber Tests and Generate Reports
         run: mvn test
 
-      - name: Debug Report Files
-        run: ls -R target
-
       - name: Upload Cucumber HTML Report
         uses: actions/upload-artifact@v4
         with:

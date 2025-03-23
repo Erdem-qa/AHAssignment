@@ -18,7 +18,7 @@ import org.junit.runner.RunWith;
         },
         features = "src/test/resources/features",
         glue = {"org.ahassignment.stepDefinitions"},
-        tags = "@test1",
+        tags = "@test",
         monochrome = true,
         publish = true
 )
