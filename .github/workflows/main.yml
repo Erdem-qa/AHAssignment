@@ -42,8 +42,6 @@ jobs:
 
       - name: Run Cucumber Tests and Generate Reports
         run: mvn test
-      - name: Run Cucumber Tests and Generate Reports
-        run: mvn test
 
       - name: Debug Report Files
         run: ls -R target
